@@ -13,3 +13,18 @@ output:
       countIncrementalSlides: false
       #ratio "16:9" # or 4:3
 ---
+---
+# Writing slides
+There are two "types" of slide.
+
+---
+class: inverse, center, middle
+# Writing slides
+There are two "types" of slide.
+
+class: center, middle
+# If you don't use inverse you just get a white (or other, depending on your colourscheme) background...
+
+```{r}
+knitr::include_graphics('img/Lena-river.jpg')
+```
