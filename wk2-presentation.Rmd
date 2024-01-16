@@ -1,0 +1,15 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader: # output format
+    lib_dir: libs #used for dependent libraries 
+    nature:
+      highlightStyle:  arta # how the code displays
+      highlightLines: true 
+      countIncrementalSlides: false
+      #ratio "16:9" # or 4:3
+---
