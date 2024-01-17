@@ -25,6 +25,24 @@ There are two "types" of slide.
 class: center, middle
 # If you don't use inverse you just get a white (or other, depending on your colourscheme) background...
 
+
+
 ```{r}
-knitr::include_graphics('img/Lena-river.jpg')
+remotes::install_github("ropensci/RefManageR")
+```
+```{r}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE,
+           no.print.fields=c("doi", "url", "urldate", "issn"))
+myBib <- ReadBib("./Bibtex.bib", check = FALSE)
+```
+
+```{r}
+install.packages('knitcitations')
+library(knitcitations)
 ```
