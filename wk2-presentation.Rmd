@@ -1,18 +1,22 @@
 ---
 title: "MODIS"
-subtitle: "⚔<br/>MODERATE RESOLUTION IMAGING SPECTROMETER"
+subtitle: " SATTELITE SENSOR "
 author: "Sameera Siddiqui"
 institute: "RStudio, PBC"
 date: "2024/01/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader: # output format
- 
+  #names(xaringan:::list_css())
+    css: [default, metropolis, metropolis-fonts]
     lib_dir: libs #used for dependent libraries 
     nature:
       highlightStyle: tomorrow # how the code displays
       highlightLines: true 
       countIncrementalSlides: false
-      #ratio "16:9" # or 4:3
+      ratio: "16:9"  # or 4:3
+---
+#WEEK 2 - PRESENTATION ON XARINGAN
+    
 ---
 
 
