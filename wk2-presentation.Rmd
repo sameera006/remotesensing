@@ -47,6 +47,12 @@ options(htmltools.dir.version = FALSE)
 [video](https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4)
 
 ---
+# Modis Component
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/modisComponents.jpg')
+```
+
 
 ---
 class: inverse, center, middle
@@ -57,7 +63,41 @@ class: inverse, center, middle
 
 [data](https://search.earthdata.nasa.gov/search?portal=idn&fi=MODIS)
 
+---
+## Some Examples of Latest Image taken by MODIS
+
+January 20, 2024 - Snow in the United Kingdom
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/SnowinUK.jpg')
+```
+On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired a false-color image of snow across the United Kingdom. In this type of image, snow appears bright blue, vegetation is electric green, water looks dark blue. Cloud usually appears white, but high, cold clouds carrying ice crystals may be tinted bright blue.
+
+##Image Facts
+Satellite: Terra
+Date Acquired: 1/17/2024
+Resolutions: 1km (378.6 KB), 500m (875.8 KB), 250m (1.5 MB)
+Bands Used: 7,2,1
+Image Credit: MODIS Land Rapid Response Team, NASA GSFC
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/image01172024_main.jpg')
+```
+
+In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands in the southwest Indian Ocean east of Madagascar, with torrential rain and flooding.
+The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satellite acquired this true-color image of the storm on January 14.
+
+##Image Facts
+Satellite: Aqua
+Date Acquired: 1/14/2024
+Resolutions: 1km (734.9 KB), 500m (2 MB), 250m (3.7 MB)
+Bands Used: 1,4,3
+Image Credit: MODIS Land Rapid Response Team, NASA GSFC
+
+---
 Pawnee Fire, Northern California
+
+Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.
 
 ```{r echo=FALSE, out.width='60%', fig.align='center'}
 knitr::include_graphics('img/pawnee_oli_2018175_th.jpg')
