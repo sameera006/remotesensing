@@ -68,7 +68,7 @@ class: inverse, center, middle
 
 January 20, 2024 - Snow in the United Kingdom
 
-```{r echo=FALSE, out.width='60%', fig.align='center'}
+```{r echo=FALSE, out.width='50%', fig.align='left'}
 knitr::include_graphics('img/SnowinUK.jpg')
 ```
 On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired a false-color image of snow across the United Kingdom. In this type of image, snow appears bright blue, vegetation is electric green, water looks dark blue. Cloud usually appears white, but high, cold clouds carrying ice crystals may be tinted bright blue.
@@ -80,7 +80,8 @@ Resolutions: 1km (378.6 KB), 500m (875.8 KB), 250m (1.5 MB)
 Bands Used: 7,2,1
 Image Credit: MODIS Land Rapid Response Team, NASA GSFC
 
-```{r echo=FALSE, out.width='60%', fig.align='center'}
+---
+```{r echo=FALSE, out.width='50%', fig.align='left'}
 knitr::include_graphics('img/image01172024_main.jpg')
 ```
 
