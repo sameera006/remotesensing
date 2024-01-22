@@ -6,7 +6,7 @@ institute: "RStudio, PBC"
 date: "2024/01/21 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader: # output format
-  css: [default, metropolis, metropolis-fonts]
+ 
     lib_dir: libs #used for dependent libraries 
     nature:
       highlightStyle: tomorrow # how the code displays
@@ -42,21 +42,37 @@ options(htmltools.dir.version = FALSE)
   ##Aqua
   Aqua, Latin for water, is a NASA Earth Science satellite mission named for the large amount of information that the mission is collecting about the Earth's water cycle, including evaporation from the oceans, water vapor in the atmosphere, clouds,precipitation, soil moisture, sea ice, land ice, and snow cover on the land and ice. Additional variables also being measured by Aqua include radiative energy fluxes, aerosols, vegetation cover on the land, phytoplankton and dissolved organic matter in the oceans, and air, land, and water temperatures.
   
-[make a link](https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4)
+
+  
+[video](https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4)
+
+---
 
 ---
 class: inverse, center, middle
-# Writing slides
-There are two "types" of slide.
 
-class: center, middle
-# If you don't use inverse you just get a white (or other, depending on your colourscheme) background...
+# Data Collection
+
+*Data can be collected from this website.
+
+[data](https://search.earthdata.nasa.gov/search?portal=idn&fi=MODIS)
+
+Pawnee Fire, Northern California
+
+```{r echo=FALSE, out.width='60%', fig.align='center'}
+knitr::include_graphics('img/pawnee_oli_2018175_th.jpg')
+```
+
+
+
+
 
 
 
 ```{r}
 remotes::install_github("ropensci/RefManageR")
 ```
+
 ```{r}
 library(RefManageR)
 BibOptions(check.entries = FALSE,
