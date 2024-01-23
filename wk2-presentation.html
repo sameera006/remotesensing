@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # MODIS
 ]
 .subtitle[
-## SATTELITE SENSOR
+## THE SATTELITE SENSOR
 ]
 .author[
 ### Sameera Siddiqui
@@ -26,28 +26,25 @@ class: center, middle, inverse, title-slide
 ### RStudio, PBC
 ]
 .date[
-### 2024/01/21 (updated: 2024-01-22)
+### 2024/01/21 (updated: 2024-01-23)
 ]
 
 ---
 
-#WEEK 2 - PRESENTATION ON XARINGAN
-    
----
 
 
 # SUMMARY
 ## What is MODIS ?
 
-*MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. 
+* MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. 
 
-*Terra's orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. 
+* Terra's orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. 
 
-*Terra MODIS and Aqua MODIS are viewing the entire Earth's surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths. 
+* Terra MODIS and Aqua MODIS are viewing the entire Earth's surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths. 
 
-*Its exceptionally broad spectral range enables MODIS data to be used in studies across numerous disciplines, including vegetative health, changes in land cover and land use, oceans and ocean biology, sea surface temperature, and cloud analysis.
+* Its exceptionally broad spectral range enables MODIS data to be used in studies across numerous disciplines, including vegetative health, changes in land cover and land use, oceans and ocean biology, sea surface temperature, and cloud analysis.
 
-*It also is used extensively for monitoring fires and natural hazards along with oil spills. An important attribute of MODIS data is the availability of MODIS data products in real-time and near real-time. 
+* It also is used extensively for monitoring fires and natural hazards along with oil spills. An important attribute of MODIS data is the availability of MODIS data products in real-time and near real-time. 
 
 
 
@@ -62,7 +59,7 @@ class: center, middle, inverse, title-slide
   
 
   
-[video](https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4)
+video: https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4
 
 ---
 # Modis Component
@@ -71,21 +68,31 @@ class: center, middle, inverse, title-slide
 
 
 ---
-class: inverse, center, middle
-
 # Data Collection
 
-*Data can be collected from this website.
+MODIS data can be found from the information sites listed below.
+
+This is a [link to Google](https://www.google.com/)
 
 [data](https://search.earthdata.nasa.gov/search?portal=idn&amp;fi=MODIS)
 
+[CLOUD](http://ladsweb.nascom.nasa.gov/)
+
+[LAND](https://lpdaac.usgs.gov/)
+
+[cryosphere](http://nsidc.org/daac/modis/index.html)
+
+[SEA](http://oceancolor.gsfc.nasa.gov/)
 ---
-## Some Examples of Latest Image taken by MODIS
+# Examples of Latest Images taken by MODIS 
 
-January 20, 2024 - Snow in the United Kingdom
+##January 20, 2024 - Snow in the United Kingdom
 
-&lt;img src="img/SnowinUK.jpg" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
-On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired a false-color image of snow across the United Kingdom. In this type of image, snow appears bright blue, vegetation is electric green, water looks dark blue. Cloud usually appears white, but high, cold clouds carrying ice crystals may be tinted bright blue.
+&lt;img src="img/SnowinUK.jpg" width="30%" style="display: block; margin: auto auto auto 0;" /&gt;
+.pull-right[On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired a false-color image of snow across the United Kingdom. In this type of image, snow appears bright blue, vegetation is electric green, water looks dark blue. Cloud usually appears white, but high, cold clouds carrying ice crystals may be tinted bright blue.]
+
+
+
 
 ##Image Facts
 Satellite: Terra
@@ -95,10 +102,12 @@ Bands Used: 7,2,1
 Image Credit: MODIS Land Rapid Response Team, NASA GSFC
 
 ---
-&lt;img src="img/image01172024_main.jpg" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
 
-In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands in the southwest Indian Ocean east of Madagascar, with torrential rain and flooding.
-The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satellite acquired this true-color image of the storm on January 14.
+#Tropical Cyclone Belal
+&lt;img src="img/image01172024_main.jpg" width="30%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+.pull-right[In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands in the southwest Indian Ocean east of Madagascar, with torrential rain and flooding.
+The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satellite acquired this true-color image of the storm on January 14.]
 
 ##Image Facts
 Satellite: Aqua
@@ -108,22 +117,18 @@ Bands Used: 1,4,3
 Image Credit: MODIS Land Rapid Response Team, NASA GSFC
 
 ---
-Pawnee Fire, Northern California
+#Pawnee Fire, Northern California
 
-Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.
+.pull-right[Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.]
 
-&lt;img src="img/pawnee_oli_2018175_th.jpg" width="60%" style="display: block; margin: auto;" /&gt;
-
-
+&lt;img src="img/pawnee_oli_2018175_th.jpg" width="40%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 
 
 
 
 
-```r
-remotes::install_github("ropensci/RefManageR")
-```
+
 
 ```
 ## Skipping install of 'RefManageR' from a github remote, the SHA1 (26198094) has not changed since last install.
@@ -131,27 +136,9 @@ remotes::install_github("ropensci/RefManageR")
 ```
 
 
-```r
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "markdown",
-           hyperlink = TRUE,
-           dashed = FALSE,
-           no.print.fields=c("doi", "url", "urldate", "issn"))
-myBib &lt;- ReadBib("./My Library.bib", check = FALSE)
-```
 
 
-```r
-options(repos = c(CRAN = "https://cran.r-project.org"))
-```
 
-
-```r
-install.packages("knitcitations")
-```
 
 ```
 ## Installing package into 'C:/Users/hp/AppData/Local/R/win-library/4.3'
@@ -162,16 +149,28 @@ install.packages("knitcitations")
 ## package 'knitcitations' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-## 	C:\Users\hp\AppData\Local\Temp\Rtmpqe32Ci\downloaded_packages
-```
-
-```r
-library(knitcitations)
+## 	C:\Users\hp\AppData\Local\Temp\RtmpAxiUuN\downloaded_packages
 ```
 
 ```
 ## Warning: package 'knitcitations' was built under R version 4.3.2
 ```
+
+```r
+'r Citet(myBib,"wulderOpeningArchiveHow2012")'
+```
+
+```
+## [1] "r Citet(myBib,\"wulderOpeningArchiveHow2012\")"
+```
+
+
+
+```
+## You haven't cited any references in this bibliography yet.
+```
+
+NULL
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
