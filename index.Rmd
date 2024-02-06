@@ -129,8 +129,11 @@ The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satel
 knitr::include_graphics('img/pawnee_oli_2018175_th.jpg')
 ```
 ]
+---
+###APPLICATIONS
 
-
+---
+###REFLECTIONS
 
 
 
