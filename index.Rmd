@@ -132,15 +132,33 @@ knitr::include_graphics('img/pawnee_oli_2018175_th.jpg')
 ---
 ###APPLICATIONS
 
+The MODIS has features, which make it particularly suitable to earth characterization purposes. MODIS has 10 products dedicated mainly to land cover characterization and provides three kinds of data: angular, spectral and temporal. MODIS data also includes information about the data quality through the ‘Quality Assessment’ product.
+
+MODIS presents unique features do not present in other sensor: it has an ample variety of products including reflectance data, vegetation indices, biophysical variables, and thematic products which describe land cover characteristics. Moreover, the quality assessment per pixel information is an innovative feature potentially very useful to apply preprocessing procedures to select, transform, and/or filter the data. However, such information is not commonly applied: we only observed its use in preprocessing procedures to screen data or interpolate data gaps (colditz2008). 
+
+The limitation in its use is likely since the information contained in the QA is not totally trustworthy to identify pixels with low quality as reported by various authors (Xiao 2005, Garcı´a-Mora and Mas 2011).
+
+Due to its coarse spatial resolution MODIS cannot replace medium spatial resolution data such as that provided by Landsat and other higher resolution sensors, but it can present a useful complement, for example, filling the time-gap between two mapping efforts based upon high resolution imagery.
+
+
 ---
 ###REFLECTIONS
 
-
+So, this week we studied various types of sensors and their usage and limitations. We also discussed the tools like Xaringan and Quarto and learned how to create a portfolio and a presenation using these tools.
 
 
 
 
 ---
+***REFRENCES***
+
+@article{article,
+author = {Colditz, Rene},
+year = {2008},
+month = {01},
+pages = {},
+title = {Time Series Generation and Classification of MODIS Data for Land Cover Mapping}
+}
 ```{r echo=FALSE}
 library(RefManageR)
 BibOptions(check.entries = FALSE,
