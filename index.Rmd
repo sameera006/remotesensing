@@ -18,10 +18,9 @@ output:
       ratio: "16:9"  # or 4:3
 
 ---
-
-
 # SUMMARY
-## What is MODIS ?
+
+***WHAT IS MODIS ?***
 
 * MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. 
 
@@ -38,7 +37,7 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ---
-# MODIS Satellite Platform
+***MODIS SATELLITE PLATFORM***
 
   ## Terra
   Terra explores the connections between Earth’s atmosphere, land, snow and ice, ocean, and energy balance to understand Earth’s climate and climate change and to map the impact of human activity and natural disasters on communities and ecosystems
@@ -51,21 +50,22 @@ options(htmltools.dir.version = FALSE)
 video: https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4
 
 ---
-# Modis Component
+***Modis Component***
+
 .pull-left[
 ```{r echo=FALSE, out.width='100%', fig.align='left'}
 knitr::include_graphics('img/modisComponents.jpg')
 ```
 ]
-.pull-right[The MODIS instrument has been designed and developed since the Engineering Model (EM) was completed in mid-1995. Since then, two spaceflight units, the Protoflight Model (PFM) (aboard the Terra Satellite) , and the Flight Model 1 (FM1) (aboard the Aqua Satellite) have been completed and launched. Terra was launched on December 18, 1999, and Aqua was launched on May 4, 2002. The MODIS instruments — built to NASA specifications by Santa Barbara Remote Sensing — represent the finest in engineering of spaceflight hardware for remote sensing.
+.pull-right[The MODIS instrument has been designed and developed since the Engineering Model (EM) was completed in mid-1995. Since then, two spaceflight units, the Protoflight Model (PFM) (aboard the Terra Satellite) , and the Flight Model 1 (FM1) (aboard the Aqua Satellite) have been completed and launched. Terra was launched on December 18, 1999, and Aqua was launched on May 4, 2002. ]
 
-
-# Data Collection
+.pull-left[**Data Collection**
 
 MODIS data can be found from the information sites listed below.
 
-[data](https://search.earthdata.nasa.gov/search?portal=idn&fi=MODIS)
+[data](https://search.earthdata.nasa.gov/search?portal=idn&fi=MODIS)]
 
+.pull-left[
 [CLOUD](http://ladsweb.nascom.nasa.gov/)
 
 [LAND](https://lpdaac.usgs.gov/)
@@ -75,7 +75,7 @@ MODIS data can be found from the information sites listed below.
 [SEA](http://oceancolor.gsfc.nasa.gov/) ]
 
 ---
-# Examples of Latest Images taken by MODIS 
+***Examples of Latest Images taken by MODIS*** 
 
 
 
@@ -102,14 +102,17 @@ On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA
 
 ---
 
-#Tropical Cyclone Belal
+
 .pull-left[
 ```{r echo=FALSE, out.width='100%', fig.align='left'}
 knitr::include_graphics('img/image01172024_main.jpg')
 ```
 ]
 
-.pull-right[In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands in the southwest Indian Ocean east of Madagascar, with torrential rain and flooding.
+.pull-right[
+**Tropical Cyclone Belal**
+
+In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands in the southwest Indian Ocean east of Madagascar, with torrential rain and flooding.
 The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satellite acquired this true-color image of the storm on January 14.
 
 **Image Facts**
@@ -120,9 +123,11 @@ The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satel
 **Image Credit**: MODIS Land Rapid Response Team, NASA GSFC
 ]
 ---
-#Pawnee Fire, Northern California
 
-.pull-right[Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.]
+
+.pull-right[
+**Pawnee Fire, Northern California**
+Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.]
 
 .pull-left[
 ```{r echo=FALSE, out.width='100%', fig.align='left'}
@@ -144,7 +149,8 @@ Due to its coarse spatial resolution MODIS cannot replace medium spatial resolut
 ---
 ###REFLECTIONS
 
-So, this week we studied various types of sensors and their usage and limitations. We also discussed the tools like Xaringan and Quarto and learned how to create a portfolio and a presenation using these tools.
+So, this week we studied various types of sensors and their usage and limitations.I chose MODIS sensor which has many advantages and can be used for different type of surfaces like land-use, air-quality, vegetation temporal data and we can also monitor different types of climate changes. It can calculate the sea surface temperature and help in aerosol measurements.
+It is a rotating-mirror scanner which carries 36 bands in the UV, visible, and IR ranges, suitable for atmospheric, terrestrial, and ocean remote sensing.
 
 
 
@@ -175,10 +181,7 @@ myBib <- ReadBib("./My Library.bib", check = FALSE)
 options(repos = c(CRAN = "https://cran.r-project.org"))
 ```
 
-```{r echo=FALSE}
-install.packages("knitcitations")
-library(knitcitations)
-```
+
 
 ```{r results='asis', echo=FALSE}
 'r Citet(myBib,"wulderOpeningArchiveHow2012")'
