@@ -30,7 +30,7 @@ output:
 
 * Its exceptionally broad spectral range enables MODIS data to be used in studies across numerous disciplines, including vegetative health, changes in land cover and land use, oceans and ocean biology, sea surface temperature, and cloud analysis.
 
-* It also is used extensively for monitoring fires and natural hazards along with oil spills. An important attribute of MODIS data is the availability of MODIS data products in real-time and near real-time. 
+* It also is used extensively for monitoring fires and natural hazards along with oil spills. An important attribute of MODIS data is the availability of MODIS data products in real-time and near real-time.(MODIS) 
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -123,17 +123,36 @@ The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satel
 **Image Credit**: MODIS Land Rapid Response Team, NASA GSFC
 ]
 ---
+.pull-left[
+```{r echo=FALSE, out.width='70%', fig.align='centre'}
+knitr::include_graphics('img/pawnee_oli_2018175_th.jpg')
+```
 
+```{r echo=FALSE, out.width='70%', fig.align='left'}
+knitr::include_graphics('img/image02112024_main.jpg')
+```
+
+]
 
 .pull-right[
 **Pawnee Fire, Northern California**
-Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.]
+Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.
 
-.pull-left[
-```{r echo=FALSE, out.width='100%', fig.align='left'}
-knitr::include_graphics('img/pawnee_oli_2018175_th.jpg')
-```
-]
+
+**February 11, 2024 - Bushfire in Western Australia**
+
+Smoke from the Green Range Fire poured over the Great Australian Bight on February 8, 2024, when the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired this true-color image.
+
+**Image Facts**
+
+**Satellite:** Terra
+**Date Acquired:** 2/8/2024
+**Resolutions:** 1km (11.6 KB), 500m (40.1 KB), 250m (123 KB)
+**Bands Used:** 1,4,3
+
+**Image Credit:** MODIS Land Rapid Response Team, NASA GSFC
+(MODIS Web)]
+
 ---
 ###APPLICATIONS
 
