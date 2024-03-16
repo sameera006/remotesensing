@@ -181,6 +181,7 @@ class: center, middle, inverse
 ###REFLECTION
 ---
 
+
 So, this week we studied various types of sensors and their usage and limitations. I chose MODIS sensor which has many advantages and can be used for different type of surfaces like land-use, air-quality, vegetation temporal data and we can also monitor different types of climate changes. 
 
 It can calculate the sea surface temperature and help in aerosol measurements.
