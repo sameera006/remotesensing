@@ -4,10 +4,37 @@
     <title>MODIS</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sameera Siddiqui" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <link href="index_files/remark-css/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="index_files/js-cookie/js.cookie.js"></script>
+    <script src="index_files/peerjs/peerjs.min.js"></script>
+    <script src="index_files/tiny.toast/toast.min.js"></script>
+    <link href="index_files/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-broadcast/broadcast.js"></script>
+    <script src="index_files/freezeframe/freezeframe.min.js"></script>
+    <script src="index_files/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="index_files/fabric/fabric.min.js"></script>
+    <link href="index_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="index_files/mark.js/mark.min.js"></script>
+    <link href="index_files/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
+    <script src="index_files/clipboard/clipboard.min.js"></script>
+    <link href="index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="index_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="index_files/tile-view/tile-view.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1e6e1b3e570496d95f777e71a1adc01","expires":1}</script>
+    <script src="index_files/himalaya/himalaya.js"></script>
+    <link href="index_files/editable/editable.css" rel="stylesheet" />
+    <script src="index_files/editable/editable.js"></script>
+    <script src="index_files/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link href="index_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -26,14 +53,21 @@ class: center, middle, inverse, title-slide
 ### UNIVERSITY COLLEGE LONDON
 ]
 .date[
-### 2024/01/21 (updated: 2024-02-15)
+### 2024/01/21 (updated: 2024-03-16)
 ]
 
 ---
 
+
+background-image: url('img/2020-09-01-MODIS-fig1.jpg') 
+background-size: cover
+
+class: inverse, center, middle
 # SUMMARY
 
-***WHAT IS MODIS ?***
+---
+
+#WHAT IS MODIS?
 
 * MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. 
 
@@ -48,43 +82,37 @@ class: center, middle, inverse, title-slide
 
 
 ---
-***MODIS SATELLITE PLATFORM***
+#MODIS SATELLITE PLATFORM
 
-  ## Terra
+  ## TERRA
   Terra explores the connections between Earth’s atmosphere, land, snow and ice, ocean, and energy balance to understand Earth’s climate and climate change and to map the impact of human activity and natural disasters on communities and ecosystems
   
-  ##Aqua
+  ## AQUA
   Aqua, Latin for water, is a NASA Earth Science satellite mission named for the large amount of information that the mission is collecting about the Earth's water cycle, including evaporation from the oceans, water vapor in the atmosphere, clouds,precipitation, soil moisture, sea ice, land ice, and snow cover on the land and ice. Additional variables also being measured by Aqua include radiative energy fluxes, aerosols, vegetation cover on the land, phytoplankton and dissolved organic matter in the oceans, and air, land, and water temperatures.
   
 
-  
-video: https://terra.nasa.gov/wp-content/uploads/2019/12/13493_Terra_Instruments_20Anniversary_FINAL_VX-309498_lowres.mp4
-
 ---
-***Modis Component***
+#Modis Component
 
 .pull-left[
-&lt;img src="img/modisComponents.jpg" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="img/modisComponents.jpg" width="100%" /&gt;
 ]
-.pull-right[The MODIS instrument has been designed and developed since the Engineering Model (EM) was completed in mid-1995. Since then, two spaceflight units, the Protoflight Model (PFM) (aboard the Terra Satellite) , and the Flight Model 1 (FM1) (aboard the Aqua Satellite) have been completed and launched. Terra was launched on December 18, 1999, and Aqua was launched on May 4, 2002. ]
+.pull-right[
 
-.pull-left[**Data Collection**
+The MODIS instrument has been designed and developed since the Engineering Model (EM) was completed in mid-1995.
 
-MODIS data can be found from the information sites listed below.
+Since then, two spaceflight units, the Protoflight Model (PFM) (aboard the Terra Satellite) ,
 
-[data](https://search.earthdata.nasa.gov/search?portal=idn&amp;fi=MODIS)]
+and the Flight Model 1 (FM1) (aboard the Aqua Satellite) have been completed and launched. 
 
-.pull-left[
-[CLOUD](http://ladsweb.nascom.nasa.gov/)
+Terra was launched on December 18, 1999, and Aqua was launched on May 4, 2002. ]
 
-[LAND](https://lpdaac.usgs.gov/)
 
-[cryosphere](http://nsidc.org/daac/modis/index.html)
 
-[SEA](http://oceancolor.gsfc.nasa.gov/) ]
+
 
 ---
-***Examples of Latest Images taken by MODIS*** 
+#Examples of Latest Images taken by MODIS
 
 
 
@@ -96,11 +124,10 @@ MODIS data can be found from the information sites listed below.
 
 **Snow in the United Kingdom**
 
-On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired a false-color image of snow across the United Kingdom. In this type of image, snow appears bright blue, vegetation is electric green, water looks dark blue. Cloud usually appears white, but high, cold clouds carrying ice crystals may be tinted bright blue.
+On January 17,MODIS on NASA’s Terra satellite acquired a false-color image of snow across the United Kingdom. The snow appears bright blue, vegetation is electric green, water looks dark blue. Cloud usually appears white, but high, cold clouds carrying ice crystals may be tinted bright blue.
 
 **Image Facts**
 **Satellite**: Terra
-
 **Date Acquired**: 1/17/2024
 **Resolutions**: 1km (378.6 KB), 500m (875.8 KB), 250m (1.5 MB)
 **Bands Used**: 7,2,1
@@ -118,7 +145,6 @@ On January 17, the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA
 **Tropical Cyclone Belal**
 
 In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands in the southwest Indian Ocean east of Madagascar, with torrential rain and flooding.
-The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satellite acquired this true-color image of the storm on January 14.
 
 **Image Facts**
 **Satellite**: Aqua
@@ -128,34 +154,24 @@ The Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Aqua satel
 **Image Credit**: MODIS Land Rapid Response Team, NASA GSFC
 ]
 ---
-.pull-left[
-&lt;img src="img/pawnee_oli_2018175_th.jpg" width="70%" /&gt;
 
-&lt;img src="img/image02112024_main.jpg" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
-
-]
-
-.pull-right[
-**Pawnee Fire, Northern California**
-Temperature, humidity, and winds contributed to the rapid spread of fire in Lake County, about 100 miles northwest of Sacramento.
+&lt;img src="img/fire-modis.png" width="100%" /&gt;
 
 
-**February 11, 2024 - Bushfire in Western Australia**
 
-Smoke from the Green Range Fire poured over the Great Australian Bight on February 8, 2024, when the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite acquired this true-color image.
 
-**Image Facts**
 
-**Satellite:** Terra
-**Date Acquired:** 2/8/2024
-**Resolutions:** 1km (11.6 KB), 500m (40.1 KB), 250m (123 KB)
-**Bands Used:** 1,4,3
+The Fire Information for Resource Management System (FIRMS) distributes Near Real-Time (NRT) active fire data from the MODIS aboard the Aqua and Terra satellites.
 
-**Image Credit:** MODIS Land Rapid Response Team, NASA GSFC
-(MODIS Web)]
+The MODIS active fire and burned area products contain information unique to understanding the timing and spatial distribution of fires and their characteristics.
+
 
 ---
+class: center, middle, inverse
+
 ###APPLICATIONS
+
+---
 
 The MODIS has features, which make it particularly suitable to earth characterization purposes. MODIS has 10 products dedicated mainly to land cover characterization and provides three kinds of data: angular, spectral and temporal. MODIS data also includes information about the data quality through the ‘Quality Assessment’ product.
 
@@ -167,50 +183,38 @@ Due to its coarse spatial resolution MODIS cannot replace medium spatial resolut
 
 
 ---
-###REFLECTIONS
+class: center, middle, inverse
 
-So, this week we studied various types of sensors and their usage and limitations. I chose MODIS sensor which has many advantages and can be used for different type of surfaces like land-use, air-quality, vegetation temporal data and we can also monitor different types of climate changes. It can calculate the sea surface temperature and help in aerosol measurements.
-It is a rotating-mirror scanner which carries 36 bands in the UV, visible, and IR ranges, suitable for atmospheric, terrestrial, and ocean remote sensing.
+###REFLECTION
+---
+
+So, this week we studied various types of sensors and their usage and limitations. I chose MODIS sensor which has many advantages and can be used for different type of surfaces like land-use, air-quality, vegetation temporal data and we can also monitor different types of climate changes. 
+
+It can calculate the sea surface temperature and help in aerosol measurements.
+
+MODIS has been around for approximately two decades and hence offers image comparisons over a longer timeframe compared to satellites that were launched more recently. Furthermore, MODIS has a large range of use cases such as observing changes in the polar ice cap, pollution, urban heat island effect and biogeochemistry.
+
 
 
 
 
 ---
-***REFRENCES***
+###REFERENCES
 
-@article{article,
-author = {Colditz, Rene},
-year = {2008},
-month = {01},
-pages = {},
-title = {Time Series Generation and Classification of MODIS Data for Land Cover Mapping}
-}
+Modis web, NASA. Available at: https://modis.gsfc.nasa.gov/
 
+Colditz, Rene. (2008). Time Series Generation and Classification of MODIS Data for Land Cover Mapping. 
 
+García-Mora, T.J., Mas, J.-F. and Hinkley, E.A. (2012) ‘Land cover mapping applications with Modis: A Literature Review’, International Journal of Digital Earth, 5(1), pp. 63–87. doi:10.1080/17538947.2011.565080. 
 
+MODIS Active Fire and Burned Area Products - Home. Available at: https://modis-fire.umd.edu/ (Accessed: 16 March 2024). 
 
+Earth Science Data Systems, N. (no date) Modis, NASA. Available at: https://www.earthdata.nasa.gov/sensors/modis (Accessed: 16 March 2024). 
 
-
-[1] "r Citet(myBib,\"wulderOpeningArchiveHow2012\")"
-
-
-
-```
-## You haven't cited any references in this bibliography yet.
-```
-
-```
-## NULL
-```
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "tomorrow",
-"highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9"
-});
+<script>var slideshow = remark.create();
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
@@ -288,24 +292,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
+})();</script>
 
 <script>
 slideshow._releaseMath = function(el) {
