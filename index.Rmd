@@ -5,8 +5,8 @@ author: "Sameera Siddiqui"
 institute: "UNIVERSITY COLLEGE LONDON"
 date: "2024/01/21 (updated: `r Sys.Date()`)"
 output:
-    xaringan::moon_reader: # output format
-  #names(xaringan:::list_css())
+   xaringan::moon_reader: #output format
+    #names(xaringan:::list_css())
   #css: ["xaringan-themer.css"] 
   #highlightStyle: solarized-dark
     css: [default, metropolis, metropolis-fonts]
@@ -17,24 +17,31 @@ output:
       countIncrementalSlides: false
       ratio: "16:9"  # or 4:3
 ---
-```{r echo = FALSE, message = FALSE, warning = FALSE}
-library(here)
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-library(readxl)
-library(fs)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+# xaringan:::list_css()
+```
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
 library(countdown)
 library(xaringan)
 library(xaringanExtra)
 library(knitr)
+hook_source <- knitr::knit_hooks$get('source')
+knitr::knit_hooks$set(source = function(x, options) {
+  x <- stringr::str_replace(x, "^[[:blank:]]?([^*].+?)[[:blank:]]*#<<[[:blank:]]*$", "*\\1")
+  hook_source(x, options)
+})
 xaringanExtra::use_broadcast()
 xaringanExtra::use_freezeframe()
 xaringanExtra::use_scribble()
+#xaringanExtra::use_slide_tone()
 xaringanExtra::use_search(show_icon = TRUE, auto_search	=FALSE)
 xaringanExtra::use_freezeframe()
 xaringanExtra::use_clipboard()
 xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
 xaringanExtra::use_editable(expires = 1)
 xaringanExtra::use_fit_screen()
 xaringanExtra::use_extra_styles(
@@ -42,38 +49,44 @@ xaringanExtra::use_extra_styles(
   mute_unhighlighted_code = TRUE  
 )
 ```
-background-image: url('img/2020-09-01-MODIS-fig1.jpg') 
-background-size: cover
 
-class: inverse, center, middle
+
+
 # SUMMARY
 
----
+##WHAT IS MODIS?
 
-#WHAT IS MODIS?
+* MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra  and Aqua  satellites. 
 
-* MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. 
+* Terra's orbit around the Earth is timed so that it passes from **north to south** across the equator in the morning, while Aqua passes **south to north** over the equator in the afternoon. 
 
-* Terra's orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. 
+* Terra MODIS and Aqua MODIS are viewing the entire Earth's surface every **1 to 2 days**, acquiring data in 36 spectral bands, or groups of wavelengths. 
 
-* Terra MODIS and Aqua MODIS are viewing the entire Earth's surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths. 
+* With its wide spectral range, aids in various studies such as vegetation health, land use changes, ocean studies, sea temperature, and cloud analysis.
 
-* Its exceptionally broad spectral range enables MODIS data to be used in studies across numerous disciplines, including vegetative health, changes in land cover and land use, oceans and ocean biology, sea surface temperature, and cloud analysis.
+* MODIS is widely used for real-time and near **real-time monitoring of fires**, **natural hazards**, and **oil spills**. 
 
-* It also is used extensively for monitoring fires and natural hazards along with oil spills. An important attribute of MODIS data is the availability of MODIS data products in real-time and near real-time.(MODIS) 
-
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
 
 ---
 #MODIS SATELLITE PLATFORM
 
-  ## TERRA
+.pull-left[
+
+```{r echo=FALSE, out.width='100%', fig.align='centre'}
+knitr::include_graphics('img/AQUA.jpg')
+```
+
+]
+
+.pull-right[
+## TERRA
   Terra explores the connections between Earth’s atmosphere, land, snow and ice, ocean, and energy balance to understand Earth’s climate and climate change and to map the impact of human activity and natural disasters on communities and ecosystems
+
+
+## AQUA
   
-  ## AQUA
-  Aqua, Latin for water, is a NASA Earth Science satellite mission named for the large amount of information that the mission is collecting about the Earth's water cycle, including evaporation from the oceans, water vapor in the atmosphere, clouds,precipitation, soil moisture, sea ice, land ice, and snow cover on the land and ice. Additional variables also being measured by Aqua include radiative energy fluxes, aerosols, vegetation cover on the land, phytoplankton and dissolved organic matter in the oceans, and air, land, and water temperatures.
+  NASA's Aqua satellite collects extensive data on Earth's water cycle, including aspects like evaporation, precipitation, and ice cover. It also measures additional variables such as energy fluxes, aerosols, vegetation cover, and temperatures of air, land, and water.
+]
   
 
 ---
@@ -145,28 +158,36 @@ In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands i
 **Image Credit**: MODIS Land Rapid Response Team, NASA GSFC
 ]
 ---
+#MODIS DATA PRODUCTS
 
+.pull-left[
 ```{r echo=FALSE, out.width='100%', fig.align='centre'}
 knitr::include_graphics('img/fire-modis.png')
 ```
 
+```{r echo=FALSE, out.width='100%', fig.align='centre'}
+knitr::include_graphics('img/modis-snow.png')
+```
 
+]
 
-
-
+.pull-right[
+##MODIS Burned Area Product
 The Fire Information for Resource Management System (FIRMS) distributes Near Real-Time (NRT) active fire data from the MODIS aboard the Aqua and Terra satellites.
 
-The MODIS active fire and burned area products contain information unique to understanding the timing and spatial distribution of fires and their characteristics.
+The MODIS active fire product detects fires in 1-km pixels that are burning at the time of overpass under relatively cloud-free conditions using a contextual algorithm.
+
+##MODIS Sea Ice and Ice Surface Temperature
+These Level 2 and 3 products provide sea ice IST, or ice surface temperture, at 1-km (Level 2) and 0.5° (Level 3) resolutions over the global oceans.
+
+]
+
 
 
 ---
-class: center, middle, inverse
+#APPLICATIONS
 
-###APPLICATIONS
-
----
-
-The MODIS has features, which make it particularly suitable to earth characterization purposes. MODIS has 10 products dedicated mainly to land cover characterization and provides three kinds of data: angular, spectral and temporal. MODIS data also includes information about the data quality through the ‘Quality Assessment’ product.
+The MODIS has features, which make it particularly suitable to earth characterization purposes. MODIS has 10 products dedicated mainly to land cover characterization and provides three kinds of data: angular, spectral and temporal.
 
 MODIS presents unique features do not present in other sensor: it has an ample variety of products including reflectance data, vegetation indices, biophysical variables, and thematic products which describe land cover characteristics. Moreover, the quality assessment per pixel information is an innovative feature potentially very useful to apply preprocessing procedures to select, transform, and/or filter the data. However, such information is not commonly applied: we only observed its use in preprocessing procedures to screen data or interpolate data gaps (colditz2008). 
 
@@ -176,10 +197,9 @@ Due to its coarse spatial resolution MODIS cannot replace medium spatial resolut
 
 
 ---
-class: center, middle, inverse
 
-###REFLECTION
----
+
+#REFLECTION
 
 
 So, this week we studied various types of sensors and their usage and limitations. I chose MODIS sensor which has many advantages and can be used for different type of surfaces like land-use, air-quality, vegetation temporal data and we can also monitor different types of climate changes. 
@@ -193,7 +213,7 @@ MODIS has been around for approximately two decades and hence offers image compa
 
 
 ---
-###REFERENCES
+#REFERENCES
 
 Modis web, NASA. Available at: https://modis.gsfc.nasa.gov/
 

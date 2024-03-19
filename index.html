@@ -4,37 +4,40 @@
     <title>MODIS</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sameera Siddiqui" />
-    <script src="index_files/header-attrs/header-attrs.js"></script>
-    <link href="index_files/remark-css/default.css" rel="stylesheet" />
-    <link href="index_files/remark-css/default-fonts.css" rel="stylesheet" />
-    <script src="index_files/js-cookie/js.cookie.js"></script>
-    <script src="index_files/peerjs/peerjs.min.js"></script>
-    <script src="index_files/tiny.toast/toast.min.js"></script>
-    <link href="index_files/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-broadcast/broadcast.js"></script>
-    <script src="index_files/freezeframe/freezeframe.min.js"></script>
-    <script src="index_files/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <script src="libs/peerjs/peerjs.min.js"></script>
+    <script src="libs/tiny.toast/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
     <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
-    <script src="index_files/fabric/fabric.min.js"></script>
-    <link href="index_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-scribble/scribble.js"></script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
-    <script src="index_files/mark.js/mark.min.js"></script>
-    <link href="index_files/xaringanExtra-search/search.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-search/search.js"></script>
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
     <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":false}) })</script>
-    <script src="index_files/clipboard/clipboard.min.js"></script>
-    <link href="index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <link href="index_files/tile-view/tile-view.css" rel="stylesheet" />
-    <script src="index_files/tile-view/tile-view.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x13f2fa5df754eb4bd824a5dbab11b86","expires":1}</script>
-    <script src="index_files/himalaya/himalaya.js"></script>
-    <link href="index_files/editable/editable.css" rel="stylesheet" />
-    <script src="index_files/editable/editable.js"></script>
-    <script src="index_files/xaringanExtra_fit-screen/fit-screen.js"></script>
-    <link href="index_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9bb1a1c92be4bd69de79a8c951e2368","expires":1}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+    <script src="libs/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -53,42 +56,51 @@ class: center, middle, inverse, title-slide
 ### UNIVERSITY COLLEGE LONDON
 ]
 .date[
-### 2024/01/21 (updated: 2024-03-16)
+### 2024/01/21 (updated: 2024-03-19)
 ]
 
 ---
 
 
-background-image: url('img/2020-09-01-MODIS-fig1.jpg') 
-background-size: cover
 
-class: inverse, center, middle
+
+
+
+
+
 # SUMMARY
 
----
+##WHAT IS MODIS?
 
-#WHAT IS MODIS?
+* MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra  and Aqua  satellites. 
 
-* MODIS (or Moderate Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (originally known as EOS AM-1) and Aqua (originally known as EOS PM-1) satellites. 
+* Terra's orbit around the Earth is timed so that it passes from **north to south** across the equator in the morning, while Aqua passes **south to north** over the equator in the afternoon. 
 
-* Terra's orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. 
+* Terra MODIS and Aqua MODIS are viewing the entire Earth's surface every **1 to 2 days**, acquiring data in 36 spectral bands, or groups of wavelengths. 
 
-* Terra MODIS and Aqua MODIS are viewing the entire Earth's surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths. 
+* With its wide spectral range, aids in various studies such as vegetation health, land use changes, ocean studies, sea temperature, and cloud analysis.
 
-* Its exceptionally broad spectral range enables MODIS data to be used in studies across numerous disciplines, including vegetative health, changes in land cover and land use, oceans and ocean biology, sea surface temperature, and cloud analysis.
-
-* It also is used extensively for monitoring fires and natural hazards along with oil spills. An important attribute of MODIS data is the availability of MODIS data products in real-time and near real-time.(MODIS) 
-
+* MODIS is widely used for real-time and near **real-time monitoring of fires**, **natural hazards**, and **oil spills**. 
 
 
 ---
 #MODIS SATELLITE PLATFORM
 
-  ## TERRA
+.pull-left[
+
+&lt;img src="img/AQUA.jpg" width="100%" /&gt;
+
+]
+
+.pull-right[
+## TERRA
   Terra explores the connections between Earth’s atmosphere, land, snow and ice, ocean, and energy balance to understand Earth’s climate and climate change and to map the impact of human activity and natural disasters on communities and ecosystems
+
+
+## AQUA
   
-  ## AQUA
-  Aqua, Latin for water, is a NASA Earth Science satellite mission named for the large amount of information that the mission is collecting about the Earth's water cycle, including evaporation from the oceans, water vapor in the atmosphere, clouds,precipitation, soil moisture, sea ice, land ice, and snow cover on the land and ice. Additional variables also being measured by Aqua include radiative energy fluxes, aerosols, vegetation cover on the land, phytoplankton and dissolved organic matter in the oceans, and air, land, and water temperatures.
+  NASA's Aqua satellite collects extensive data on Earth's water cycle, including aspects like evaporation, precipitation, and ice cover. It also measures additional variables such as energy fluxes, aerosols, vegetation cover, and temperatures of air, land, and water.
+]
   
 
 ---
@@ -154,26 +166,32 @@ In January 2024, Tropical Cyclone Belal lashed Réunion and Mauritius, islands i
 **Image Credit**: MODIS Land Rapid Response Team, NASA GSFC
 ]
 ---
+#MODIS DATA PRODUCTS
 
+.pull-left[
 &lt;img src="img/fire-modis.png" width="100%" /&gt;
 
+&lt;img src="img/modis-snow.png" width="100%" /&gt;
 
+]
 
-
-
+.pull-right[
+##MODIS Burned Area Product
 The Fire Information for Resource Management System (FIRMS) distributes Near Real-Time (NRT) active fire data from the MODIS aboard the Aqua and Terra satellites.
 
-The MODIS active fire and burned area products contain information unique to understanding the timing and spatial distribution of fires and their characteristics.
+The MODIS active fire product detects fires in 1-km pixels that are burning at the time of overpass under relatively cloud-free conditions using a contextual algorithm.
+
+##MODIS Sea Ice and Ice Surface Temperature
+These Level 2 and 3 products provide sea ice IST, or ice surface temperture, at 1-km (Level 2) and 0.5° (Level 3) resolutions over the global oceans.
+
+]
+
 
 
 ---
-class: center, middle, inverse
+#APPLICATIONS
 
-###APPLICATIONS
-
----
-
-The MODIS has features, which make it particularly suitable to earth characterization purposes. MODIS has 10 products dedicated mainly to land cover characterization and provides three kinds of data: angular, spectral and temporal. MODIS data also includes information about the data quality through the ‘Quality Assessment’ product.
+The MODIS has features, which make it particularly suitable to earth characterization purposes. MODIS has 10 products dedicated mainly to land cover characterization and provides three kinds of data: angular, spectral and temporal.
 
 MODIS presents unique features do not present in other sensor: it has an ample variety of products including reflectance data, vegetation indices, biophysical variables, and thematic products which describe land cover characteristics. Moreover, the quality assessment per pixel information is an innovative feature potentially very useful to apply preprocessing procedures to select, transform, and/or filter the data. However, such information is not commonly applied: we only observed its use in preprocessing procedures to screen data or interpolate data gaps (colditz2008). 
 
@@ -183,10 +201,9 @@ Due to its coarse spatial resolution MODIS cannot replace medium spatial resolut
 
 
 ---
-class: center, middle, inverse
 
-###REFLECTION
----
+
+#REFLECTION
 
 
 So, this week we studied various types of sensors and their usage and limitations. I chose MODIS sensor which has many advantages and can be used for different type of surfaces like land-use, air-quality, vegetation temporal data and we can also monitor different types of climate changes. 
@@ -200,7 +217,7 @@ MODIS has been around for approximately two decades and hence offers image compa
 
 
 ---
-###REFERENCES
+#REFERENCES
 
 Modis web, NASA. Available at: https://modis.gsfc.nasa.gov/
 
@@ -215,7 +232,12 @@ Earth Science Data Systems, N. (no date) Modis, NASA. Available at: https://www.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create();
+<script>var slideshow = remark.create({
+"highlightStyle": "tomorrow",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
 });
@@ -293,7 +315,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 slideshow._releaseMath = function(el) {
